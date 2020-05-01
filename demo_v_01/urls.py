@@ -16,9 +16,17 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path,include
+from django.views.generic import RedirectView
 
 urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
 
+]
+urlpatterns += [
+    path('login_page/', include('login_page.urls')),
+]
+
+urlpatterns += [
+    path('', RedirectView.as_view(url='catalog/', permanent=True)),
 ]
