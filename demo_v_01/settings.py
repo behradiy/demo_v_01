@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'demo_v_01.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'demo_schema',
+        'NAME': 'tempdb',
         'USER': 'admin',
         'PASSWORD': 'J@v@d_12@13',
         'HOST': 'localhost',
