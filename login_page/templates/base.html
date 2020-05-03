@@ -1,19 +1,15 @@
-<!doctype  html>
-<html  lang="en">
+
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
 <head>
-<link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"  crossorigin="anonymous">
-<title>Django Authentication Example</title>
+  <meta charset="utf-8">
+  <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
 </head>
 <body>
-  <div  class="container">
-    <div  class="row justify-content-center">
-      <div  class="col-4">
-      <h1  class="text-center">Django Authentication Example</h1>
-      {% block main %}
-      {% endblock %}
-      </div>
-    </div>
-  </div>
+ <main>
+    {% block content %}
+    {% endblock %}
+  </main>
 </body>
 </html>
-
