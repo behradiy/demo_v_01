@@ -1,3 +1,4 @@
+
 """demo_v_01 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -16,21 +17,19 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import include, path
-<<<<<<< HEAD
 from django.views.generic import TemplateView
-
+# from register import views as v "login"
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('loginapp/', include('django.contrib.auth.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('', TemplateView.as_view(template_name='home.html'), name='home'), # new
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
-=======
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+]
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    path('',include('homepage.urls')),
->>>>>>> b4c7abd111ab6aa238e95b29616c34ab6412c488
+    path('', include('homepage.urls')),
+
 ]
 
 
