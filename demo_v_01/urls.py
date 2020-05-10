@@ -17,40 +17,19 @@ Including another URLconf
 # from django.conf.urls import url
 from django.contrib import admin
 from django.urls import include, path
-<<<<<<< HEAD
 from django.views.generic import TemplateView
 # from register import views as v "login"
-=======
-
 from django.views.generic import TemplateView
 from register import views as v
 
->>>>>>> 2a52371fbf79e2921802f3f2ae8cfe1be06cde0c
 urlpatterns = [
+    path('^', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls')),
+    # path('accounts/', include('django.contrib.auth.urls')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
-<<<<<<< HEAD
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
-]
-
-urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    path('', include('homepage.urls')),
-=======
-]
-
-urlpatterns = [
-    path(r'^admin/', admin.site.urls),
-    path('',include('homepage.urls')),
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    # path('', TemplateView.as_view(template_name='home.html'), name='home'),
     # views for the "register app" imported from here as "V"
     path("register/", v.register, name="register"),
->>>>>>> 2a52371fbf79e2921802f3f2ae8cfe1be06cde0c
-
-]
-
-
-urlpatterns += [
+    path('', include('homepage.urls')),
     path('', include('django.contrib.auth.urls')),
-    ]
+]
