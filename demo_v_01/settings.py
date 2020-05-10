@@ -32,6 +32,15 @@ LOGOUT_REDIRECT_URL = 'home'
 # Application definition
 # also crispy forms added
 
+
+# starting email verificaation system
+# for gmail or google apps
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gamil.com'
+EMAIL_HOST_USER = 'behradazimi1@gamil.com'
+EMAIL_HOST_PASSWORD = 'vtipsolo4937'
+EMAIL_PORT = 587
+
 INSTALLED_APPS = [
 
     'django.contrib.admin',
@@ -127,5 +136,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
 # adding crispy forms for sign up
 CRISPY_TEMPLATE_PACK = "bootstrap4"
