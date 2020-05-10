@@ -143,7 +143,3 @@ STATIC_URL = '/static/'
 
 # adding crispy forms for sign up
 CRISPY_TEMPLATE_PACK = "bootstrap4"
-
-
-
-
