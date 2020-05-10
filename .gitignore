@@ -121,3 +121,5 @@ demo_v_01/settings.py
 
 *.pyc
 demo_v_01/__pycache__/
+homepage/__pycache__/
+register/__pycache__
