@@ -119,3 +119,5 @@ dmypy.json
 **/demo_v_01/settings.py
 **/settings.py
 **/*.pyc
+
+*/__pycache__
