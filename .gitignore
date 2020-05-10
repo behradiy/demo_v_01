@@ -117,4 +117,5 @@ dmypy.json
 
 # End of https://www.gitignore.io/api/djan
 **/demo_v_01/settings.py
+**/settings.py
 **/*.pyc
