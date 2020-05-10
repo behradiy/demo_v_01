@@ -35,6 +35,7 @@ LOGOUT_REDIRECT_URL = 'home'
 
 # starting email verificaation system
 # for gmail or google apps
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gamil.com'
 EMAIL_HOST_USER = 'behradazimi1@gamil.com'
