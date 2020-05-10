@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
 
 ]
 
@@ -138,9 +138,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-<<<<<<< HEAD
-=======
+
 
 # adding crispy forms for sign up
 CRISPY_TEMPLATE_PACK = "bootstrap4"
->>>>>>> login
