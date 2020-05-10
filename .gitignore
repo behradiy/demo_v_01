@@ -116,7 +116,7 @@ dmypy.json
 .pyre/
 
 # End of https://www.gitignore.io/api/django #
-./demo_v_01/settings.py
+demo_v_01/settings.py
 *.pyc
 
 *.pyc
