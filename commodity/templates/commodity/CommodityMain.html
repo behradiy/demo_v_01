@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Commodity Main
+    </title>
+</head>
+<body>
+<ul>
+ {% for comm in commodity  %}
+     <li>{{ comm.Name }} {{ comm.Price }} </li>
+ {% endfor %}
+</ul>
+
+</body>
+</html>
