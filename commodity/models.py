@@ -16,7 +16,7 @@ class Commoditie (models.Model):
     image = models.ImageField()
 
 class Category (models.Model):
-    
+
     Name=models.CharField(max_length=50)
     selesNumber=models.IntegerField()
     Popularity = models.IntegerField()

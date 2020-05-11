@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from .models import *
 from django.http import HttpRequest
-def main (request):
-    
+def mainpage(request):
+
+
 
 
 
