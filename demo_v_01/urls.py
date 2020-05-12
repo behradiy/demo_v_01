@@ -30,7 +30,11 @@ urlpatterns = [
     path("register/", v.register, name="register"),
     path('', include('homepage.urls')),
     path('', include('django.contrib.auth.urls')),
+
 ]
 urlpatterns += [
     # path('', include('django.contrib.auth.urLs')),
+]
+urlpatterns += [
+    path('Commidity/', include('commodity.urls'))
 ]
