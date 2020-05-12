@@ -8,12 +8,12 @@ class Commoditie (models.Model):
         on_delete=models.CASCADE,
     )
     Price = models.BigIntegerField()
-    SelesNumber = models.IntegerField()
-    Popularity=models.IntegerField()
-    Views=models.IntegerField()
+    SelesNumber = models.IntegerField(default=0)
+    Popularity=models.IntegerField(default=0)
+    Views=models.IntegerField(default=0)
     AmountinStore = models.IntegerField()
     About = models.CharField(max_length=5000)
-    image = models.ImageField()
+    image = models.ImageField(null=True)
 
 class Category (models.Model):
 
