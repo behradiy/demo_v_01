@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
-    # views for the "register app" imported from here as "V"
+    # views for the "registering" imported from here as "V"
     path("register/", v.register, name="register"),
 
 ]

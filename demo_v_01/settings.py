@@ -29,18 +29,17 @@ ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
-# Application definition
-# also crispy forms added
 
-
-# starting email verificaation system
-# for gmail or google apps
+LANGUAGE_CODE = 'pr'
+# FOR EMAILING , DO NOT DELETE THEM PLEASE!
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gamil.com'
+# EMAIL_HOST_USER = 'behradazimi1@gmail.com'
+# EMAIL_HOST_PASSWORD = ''
+# EMAIL_PORT = 587
+# EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+# EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gamil.com'
-EMAIL_HOST_USER = 'behradazimi1@gamil.com'
-EMAIL_HOST_PASSWORD = 'vtipsolo4937'
-EMAIL_PORT = 587
 
 INSTALLED_APPS = [
 

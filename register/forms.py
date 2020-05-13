@@ -14,9 +14,9 @@ class RegisterForm(UserCreationForm):
         fields = ["username", "email", "password1", "password2"]
 
 
-class ReserPassword(PasswordResetForm):
-    resetpasswors = forms.PasswordInput()
-    
+class ResetPassword(PasswordResetForm):
+    resetpassword = forms.PasswordInput()
+
     class Meta:
         model = User
         fields = ["email", "password1", "password2"]
