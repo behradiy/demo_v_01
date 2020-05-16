@@ -29,17 +29,18 @@ ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
-
+# for language
 LANGUAGE_CODE = 'pr'
 # FOR EMAILING , DO NOT DELETE THEM PLEASE!
-# EMAIL_USE_TLS = True
-# EMAIL_HOST = 'smtp.gamil.com'
-# EMAIL_HOST_USER = 'behradazimi1@gmail.com'
-# EMAIL_HOST_PASSWORD = ''
-# EMAIL_PORT = 587
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'behradazimi1@gmail.com'
+EMAIL_HOST_PASSWORD = 'vtipsolo1380'
+EMAIL_PORT = 587
 # EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 # EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 INSTALLED_APPS = [
 
@@ -48,8 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    "crispy_forms",
     'django.contrib.staticfiles',
+    "crispy_forms",
     'register.apps.RegisterConfig',
 ]
 

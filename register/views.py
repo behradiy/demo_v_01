@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
 from .forms import RegisterForm
 from django.core.mail import send_mail
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import get_template
+from django.template import Context
+
 # rom django.contrib import settings
 
 
@@ -10,7 +14,7 @@ def register(response):
         form = RegisterForm(response.POST)
         if form.is_valid():
             form.save()
-            #
+
         # here , after registering, we will see the login page as we agreed on
         return redirect("/login")
     else:
