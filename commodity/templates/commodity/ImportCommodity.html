@@ -8,7 +8,14 @@
 
 <form action = "" method = "post">
     {% csrf_token %}
-    {{form }}
+    <ul>
+        <li>Name {{ form.Name }}</li>
+        <li>Category {{form.Category}} {{ form.Category.help_text }}</li>
+        <li>Price {{ form.Price }} </li>
+        <li>About {{ form.About }}</li>
+        <li>Amount {{ form.Amountinstore }}</li>
+        <li> Marketer {{ form.Marketer }}   {{ form.Marketer.help_text }}</li>
+    </ul>
     <input type="submit" value=Submit">
 </form>
 

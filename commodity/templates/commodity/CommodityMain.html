@@ -6,9 +6,15 @@
     </title>
 </head>
 <body>
+<form action = "" method = "POST">
+    {% csrf_token %}
+    {{ SortImport }}
+     <input type="submit" value=Submit">
+</form>
 <ul>
  {% for comm in commodity  %}
-     <li>{{ comm.Name }} {{ comm.Price }} </li>
+     <li>{{ comm.Name }}&nbsp;&nbsp;&nbsp;&nbsp;{{ comm.Category.Name }}&nbsp;&nbsp;&nbsp;&nbsp;
+     {{ comm.About }}&nbsp;&nbsp;&nbsp;&nbsp; {{ comm.Views }} &nbsp;&nbsp;&nbsp;{{ comm.Price }}</li>
  {% endfor %}
 </ul>
 

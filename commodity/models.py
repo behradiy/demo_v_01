@@ -21,7 +21,11 @@ class Category (models.Model):
     selesNumber=models.IntegerField()
     Popularity = models.IntegerField()
     views = models.IntegerField()
-    Image = models.ImageField()
+    Image = models.ImageField(null=True)
+    def __str__(self):
+        return self.Name
+
+
 
 
 

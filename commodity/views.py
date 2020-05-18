@@ -1,14 +1,27 @@
 from django.shortcuts import render
 from .models import *
-from django.http import HttpRequest,HttpResponse
+from django.http import HttpRequest, HttpResponse
 from django.template import loader
-from .forms import importCommodity
+from .forms import importCommodity,SortImport
+
 def mainpage(request):
-    cms = Commoditie.objects.all()
-    context = {'commodity': cms, }
-    t = loader.get_template('commodity/CommodityMain.html')
-    t.render(context)
-    return HttpResponse(t)
+
+    if (request.method=='GET'):
+        cms = Commoditie.objects.order_by('Views')[:30]
+        context = {'commodity': cms, 'SortImport':SortImport}
+        return render(request, 'commodity/CommodityMain.html', context)
+
+    elif(request.method=='POST'):
+        if 'Import' in request.POST:
+            cms = Commoditie.objects.order_by(request.POST['Import'])[0:30]
+
+            context= {'commodity':cms,'SortImport':SortImport}
+            return render(request, 'commodity/CommodityMain.html', context)
+
+
+
+
+
 
 def importcommodity (request):
     if (request.method == 'POST'):
@@ -19,8 +32,11 @@ def importcommodity (request):
                                   Category=C,
                                   Marketer=M,
                                   AmountinStore=request.POST['Amountinstore'],
-                                  About=request.POST['About'])
+                                  About=request.POST['About']
+                                    )
+        #image=request.POST['Image']
         COM.save();
+        return HttpResponse("ok siktir")
 
 
     elif (request.method=='GET'):
