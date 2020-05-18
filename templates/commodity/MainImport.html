@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{%  block title %}MainImport{% endblock %}
+{% block content %}
+    <p>
+        <a href={% url 'importComm' %}>import Commidity</a>
+    </p>
+    <p>
+        <a href={% url 'importCat' %}>import Category</a>
+    </p>
+{% endblock %}

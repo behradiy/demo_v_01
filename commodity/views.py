@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 from django.http import HttpRequest, HttpResponse
 from django.template import loader
-from .forms import importCommodity,SortImport
+from .forms import importCommodity,SortImport,importCategory
+
 
 def mainpage(request):
 
@@ -18,7 +19,9 @@ def mainpage(request):
             context= {'commodity':cms,'SortImport':SortImport}
             return render(request, 'commodity/CommodityMain.html', context)
 
-
+def MainImport(request):
+    if (request.method=='GET'):
+        return render(request,'commodity/MainImport.html',context=None)
 
 
 
@@ -43,7 +46,9 @@ def importcommodity (request):
         Context = {'form': importCommodity()}
         return render(request,'commodity/ImportCommodity.html',Context)
 
-
+def importcategory(request):
+    context = {'catformcont':importCategory()}
+    return render(request,"commodity/ImportCat.html",context)
 
 
 # Create your views here.

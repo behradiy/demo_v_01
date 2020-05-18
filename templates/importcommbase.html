@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block  title%} Import {% endblock %}</title>
+</head>
+<body>
+
+<form action="{% block formaction%} {% endblock %}" method="{% block formmethod %}{% endblock %}">
+    {% csrf_token %}
+    {% block formcontent %}
+    {% endblock %}
+    <input type="submit" value="submit">
+</form>
+
+</body>

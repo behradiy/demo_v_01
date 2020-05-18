@@ -1,0 +1,14 @@
+{% extends "importcommbase.html" %}
+{% block title %}importcomm{% endblock %}
+{% block formmethod %}POST{% endblock %}
+{% block formcontent%}
+    <ol>
+        <li>Name {{ form.Name }}</li>
+        <li>Price {{ form.Price }}</li>
+        <li>Marketer {{ form.Marketer }} {{ form.Marketer.help_text }}</li>
+        <li>Amount {{ form.Amountinstore }}</li>
+        <li>Category {{ form.Category }} {{ form.Category.help_text }}</li>
+        <li>About {{ form.About }}</li>
+    </ol>
+{% endblock %}
+
