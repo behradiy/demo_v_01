@@ -4,7 +4,7 @@ from .views import importcommodity,importcategory,mainpage,MainImport
 
 urlpatterns=[
     path('',mainpage,name='Commmain'),
-    re_path(r'^import/$',MainImport,name='importComm'),
+    re_path(r'^import/$',MainImport,name='MainImport'),
     path('import/comm/',importcommodity,name='importComm'),
     path('import/Cat/',importcategory,name='importCat'),
 

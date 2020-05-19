@@ -18,9 +18,9 @@ class Commoditie (models.Model):
 class Category (models.Model):
 
     Name=models.CharField(max_length=50)
-    selesNumber=models.IntegerField()
-    Popularity = models.IntegerField()
-    views = models.IntegerField()
+    selesNumber=models.IntegerField(default=0)
+    Popularity = models.IntegerField(default=0)
+    views = models.IntegerField(default=0)
     Image = models.ImageField(null=True)
     def __str__(self):
         return self.Name

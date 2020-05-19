@@ -47,8 +47,14 @@ def importcommodity (request):
         return render(request,'commodity/ImportCommodity.html',Context)
 
 def importcategory(request):
-    context = {'catformcont':importCategory()}
-    return render(request,"commodity/ImportCat.html",context)
+    if (request.method=="GET"):
+        context = {'catformcont':importCategory()}
+        return render(request,"commodity/ImportCat.html",context)
+    elif (request.method=='POST'):
+        Cat = Category.objects.create(Name=request.POST['Name'])
+        Cat.save()
+        return HttpResponse("ok banam siktir")
+
 
 
 # Create your views here.

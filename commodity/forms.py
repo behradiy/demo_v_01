@@ -6,11 +6,11 @@ class importCommodity(forms.Form):
     catsstr= ""
     for c in cats:
         catsstr+=(c.Name+" ")
+
     Marketers=User.objects.all()
     Marketerstr= ""
     for us in Marketers:
         Marketerstr+=(str(us.id)+" ")
-
 
     Category = forms.CharField(max_length=50,help_text=catsstr)
     Name = forms.CharField(max_length=50)
@@ -26,9 +26,6 @@ class SortImport(forms.Form):
 
 class importCategory(forms.Form):
     Name = forms.CharField(max_length=50)
-    selesNumber = forms.IntegerField()
-    Popularity = forms.IntegerField()
-    views = forms.IntegerField()
 
 
 
