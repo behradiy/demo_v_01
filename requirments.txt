@@ -8,3 +8,4 @@ sqlparse==0.3.1
 pkg-resources==0.0.0
 javad
 javad2
+zahra2
